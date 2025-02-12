@@ -53,7 +53,7 @@ func main() {
 	go client.ReadMessages()
 
 	scanner := bufio.NewScanner(os.Stdin)
-	fmt.Println(" Type a message and press ENTER to send (type 'exit' to quit):")
+	fmt.Println("Type a message and press ENTER to send (type 'exit' to quit):")
 
 	go func() {
 		for scanner.Scan() {
@@ -68,7 +68,7 @@ func main() {
 				log.Println(" Send error:", err)
 				return
 			}
-			fmt.Println(" Message sent!")
+			fmt.Println(" Message sent")
 		}
 	}()
 

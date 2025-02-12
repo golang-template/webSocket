@@ -9,10 +9,10 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-// WebSocket upgrader: upgrades HTTP to WebSocket
+// upgrades HTTP to WebSocket
 var upgrader = websocket.Upgrader{
 	CheckOrigin: func(r *http.Request) bool {
-		return true // Allow all origins (modify for production)
+		return true // Allow all origins
 	},
 }
 
